@@ -13,6 +13,12 @@ return elements in First In First Out order.
 Stretch: What if you could only use instances of your Stack class to implement the Queue?
          What would that look like? How many Stacks would you need? Try it!
 """
+
+### Queues
+#  * Has the methods: `enqueue`, `dequeue`, and `len`.
+#    * `enqueue` adds an element to the back of the queue.
+#    * `dequeue` removes and returns the element at the front of the queue.
+#    * `len` returns the number of elements in the queue.
 class Queue:
     def __init__(self):
         self.size = 0

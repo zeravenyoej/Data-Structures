@@ -10,6 +10,11 @@ return elements in Last In First Out order.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
 """
+
+# * Should have the methods: `push`, `pop`, and `len`.
+#    * `push` adds an item to the top of the stack.
+#    * `pop` removes and returns the element at the top of the stack
+#    * `len` returns the number of elements in the stack.
 class Stack:
     def __init__(self):
         self.size = 0
