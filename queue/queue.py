@@ -155,8 +155,8 @@ class Queue:
         # self.storage.append(value)
 
         # LinkedList implementation
-        self.storage.add_to_tail(value)
         self.size += 1
+        self.storage.add_to_tail(value)
 
 #    * `dequeue` removes and returns the element at the front of the queue.
     def dequeue(self):
@@ -168,5 +168,7 @@ class Queue:
         #     return removed
 
         # LinkedList implementation
-        self.storage.remove_head()
+        if self.size == 0:
+            return None
         self.size -= 1
+        return self.storage.remove_head()

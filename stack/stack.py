@@ -132,42 +132,44 @@ return elements in Last In First Out order.
 class Stack:
     def __init__(self):
         # array implementaion
-        self.storage = []
+        # self.storage = []
 
         # linkedList implementaion
-        # self.size = 0
-        # self.storage = LinkedList()
+        self.size = 0
+        self.storage = LinkedList()
 
 #    * `len` returns the number of elements in the stack.
     def __len__(self):
         # array implementaion
-        return len(self.storage)
+        # return len(self.storage)
 
         # linkedList implementaion
-        # return self.size
+        return self.size
 
 #    * `push` adds an item to the top of the stack.
     def push(self, value):
         # array implementaion
-        return self.storage.append(value)
+        # return self.storage.append(value)
 
         # linkedList implementaion
         # make the tail point to the new_node. it'll be the last one in, therefore the first one out
-        # self.size +=1
-        # self.storage.add_to_tail(value)
+        self.size +=1
+        self.storage.add_to_tail(value)
 
 
 
 #    * `pop` removes and returns the element at the top of the stack
     def pop(self):
         # array implementaion
-        if len(self.storage) == 0:
-            return None
-        else: 
-            popped = self.storage.pop()
-            return popped
+        # if len(self.storage) == 0:
+        #     return None
+        # else: 
+        #     popped = self.storage.pop()
+        #     return popped
             
         # linkedList implementaion
         # last in should be the first out
-        # self.size -=1
-        # self.storage.remove_tail()
+        if self.size == 0:
+            return None
+        self.size -=1
+        return self.storage.remove_tail()
